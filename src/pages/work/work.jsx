@@ -43,13 +43,17 @@ const WORK = () => {
 			{data.map((item, index) => {
 				if (index === work_state) {
 					return (
-						<CONTAINER key={id.get()}>
+						<CONTAINER
+							key={id.generate()}
+						>
 							{' '}
 							<PROJECT_IMAGE
 								src={item.image}
 							/>{' '}
 							<PROJECT_TITLE
-								children={item.name}
+								children={
+									item.title
+								}
 							/>{' '}
 						</CONTAINER>
 					)
@@ -57,9 +61,29 @@ const WORK = () => {
 			})}
 
 			<button
-				onClick={() =>
-					set_work_state(work_state + 1)
-				}
+				onClick={() => {
+					if (work_state <= 0) {
+						console.log(work_state)
+						return set_work_state(
+							data.length 
+						)
+					} else {
+						set_work_state(work_state - 1)
+						console.log(work_state)
+					}
+				}}
+			>
+				previous
+			</button>
+			<button
+				onClick={() => {
+					if (work_state >= data.length) {
+						console.log(work_state)
+						return set_work_state(0)
+					} else {
+						set_work_state(work_state + 1)
+					}
+				}}
 			>
 				next
 			</button>
