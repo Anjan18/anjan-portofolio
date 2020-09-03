@@ -18,7 +18,8 @@ const ITEMS = styled(NavLink)`
 	color: white;
 `
 
-const nav_items = ['home', 'work', 3, 4, 5]
+// const nav_items = ['home', 'work', 3, 4, 5]
+const nav_items = [{ name: 'work', path: '/work' }]
 
 const NAVIGATION_ITEMS = () => {
 	return (
@@ -30,8 +31,8 @@ const NAVIGATION_ITEMS = () => {
 						whileHover="hover"
 					>
 						<ITEMS
-							to=""
-							children={item}
+							to={item.path}
+							children={item.name}
 							key={short_id.generate()}
 						/>
 					</motion.span>

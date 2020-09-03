@@ -5,33 +5,50 @@ let left_padding = `8%`
 
 const INTROS = styled.div`
 	position: absolute;
-
 	width: 100vw;
 	// padding-left: 2rem;
 	color: white;
 	z-index: 3;
-	top: 55vh;
+	top: 65vh;
 	text-transform: uppercase;
-	background: #06050599;
+	background: #28282887;
 	display: grid;
 	align-items: center;
+
 	& h1 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		padding-left: ${left_padding};
 		padding-top: 5%;
 	}
 
 	& h2 {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		padding-top: 5%;
 		padding-left: ${left_padding};
 	}
 
-	@media (max-width: 450px) {
-		top: 60vh;
-		padding: 5% 0;
+	@media (min-width: 600px) {
+		& h1 {
+			font-size: 3rem;
+		}
 
-		h2 {
+		& h2 {
+			font-size: 2rem;
+		}
+	}
+
+	@media (min-width: 900px) {
+		& h1 {
+			font-size: 3.5rem;
+		}
+		& h2 {
+			font-size: 3rem;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		& h1 {
+			font-size: 4rem;
 		}
 	}
 `

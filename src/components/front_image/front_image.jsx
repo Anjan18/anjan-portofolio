@@ -9,22 +9,48 @@ const CONTAINER = styled.div`
 `
 
 const IMAGE = styled.img`
-	@media (max-width: 450px) {
-		height: 100vh;
-		max-width: 100vw;
-		position: absolute;
-		top: 0;
-		transform: scale(1.5, 1);
-		background: #876245;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+
+	@media (min-height: 800px), @media (min-width: 400px) {
+		width: 150vw;
+		left: -23%;
 	}
-	background: none;
 
 	@media (max-width: 600px) {
-		left: -5;
+		width: 130vw;
+		left: -15vw;
 	}
 
-	@media (max-width: 768px) {
-		left: -5;
+	@media (min-width: 600px) {
+		width: 110vw;
+		left: -5vw;
+	}
+
+	@media (min-width: 700px) {
+		width: 100vw;
+		left: 0;
+	}
+
+	@media (min-width: 800px) {
+		width: 80vw;
+		left: 10vw;
+	}
+
+	@media (min-width: 1100px) {
+		width: 70vw;
+		left: 40vw;
+	}
+
+	@media (min-width: 1600px) {
+		width: 60vw;
+		left: 50vw;
+	}
+
+	@media (min-width: 1900px) {
+		width: 50vw;
 	}
 `
 
