@@ -10,12 +10,11 @@ const WORK = Loadable({
 })
 
 const PAGES = ({ match }) => {
-	const [url_param, set_url_param] = useState(
-		match.params.id
-	)
+	const [url_param] = useState(match.params.id)
 	switch (url_param) {
 		case 'work':
 			return <WORK />
+
 			break
 
 		default:

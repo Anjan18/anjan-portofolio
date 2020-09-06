@@ -6,51 +6,39 @@ import swift from 'assets/front.png'
 const CONTAINER = styled.div`
 	height: 100vh;
 	width: 100vw;
+	position: absolute;
+	top: 0;
+	display: grid;
+	place-items: center;
+
+	@media (min-width: 700px) {
+		place-items: end;
+	}
 `
 
 const IMAGE = styled.img`
-	height: 100vh;
-	width: 100vw;
-	position: absolute;
-	top: 0;
+	width: 50rem;
+	position: relative;
+	top: 10vh;
 
-	@media (min-height: 800px), @media (min-width: 400px) {
-		width: 150vw;
-		left: -23%;
+	@media (max-width: 450px) {
+		display: block;
+		margin: 0 auto 0 auto;
+		width: 100%;
 	}
 
-	@media (max-width: 600px) {
-		width: 130vw;
-		left: -15vw;
+	@media (max-width: 360px) {
+		// display: block;
+		// margin: 0 auto 0 auto;
+		width: 120%;
+		margin-left: -5%;
 	}
 
-	@media (min-width: 600px) {
-		width: 110vw;
-		left: -5vw;
+	@media (max-width: 1500px) {
+		top: 0;
 	}
 
-	@media (min-width: 700px) {
-		width: 100vw;
-		left: 0;
-	}
-
-	@media (min-width: 800px) {
-		width: 80vw;
-		left: 10vw;
-	}
-
-	@media (min-width: 1100px) {
-		width: 70vw;
-		left: 40vw;
-	}
-
-	@media (min-width: 1600px) {
-		width: 60vw;
-		left: 50vw;
-	}
-
-	@media (min-width: 1900px) {
-		width: 50vw;
+	@media (max-width: 700px) {
 	}
 `
 
@@ -58,7 +46,7 @@ export const OVERLAY = styled.div`
 	content: '';
 	height: 100vh;
 	width: 100vw;
-	background: black;
+	// background: black;
 	position: absolute;
 	top: 0;
 	left: 0;
