@@ -1,44 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
+// import SuperQuery from '@themgoncalves/super-query'
 
 import swift from 'assets/front.png'
 
 const CONTAINER = styled.div`
+	background: brown;
 	height: 100vh;
 	width: 100vw;
-	position: absolute;
-	top: 0;
+	position: relative;
 	display: grid;
-	place-items: center;
-
-	@media (min-width: 700px) {
-		place-items: end;
-	}
 `
 
 const IMAGE = styled.img`
-	width: 50rem;
-	position: relative;
-	top: 10vh;
+	position: absolute;
+	max-width: 100%;
+	height: 80%;
+	object-fit: cover;
+	justify-self: center;
+	align-self: end;
 
-	@media (max-width: 450px) {
-		display: block;
-		margin: 0 auto 0 auto;
-		width: 100%;
+	@media (max-height: 450px) {
+		justify-self: end;
 	}
 
-	@media (max-width: 360px) {
-		// display: block;
-		// margin: 0 auto 0 auto;
-		width: 120%;
-		margin-left: -5%;
+	@media (min-height: 1800px) {
+		height: 70%;
 	}
-
-	@media (max-width: 1500px) {
-		top: 0;
-	}
-
-	@media (max-width: 700px) {
+	@media (min-width: 1200px) {
+		justify-self: end;
 	}
 `
 
