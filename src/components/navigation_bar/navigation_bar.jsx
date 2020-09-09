@@ -39,4 +39,6 @@ const NAVIGATION_BAR = () => {
 	)
 }
 
-export default memo(NAVIGATION_BAR)
+export default NAVIGATION_BAR
+
+// export default memo(NAVIGATION_BAR)

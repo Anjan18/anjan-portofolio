@@ -10,7 +10,8 @@ const variants = {
 	},
 	hover: {
 		fontSize: '3rem',
-		color: '#fff',
+		// color: '#fff',
+		color: 'brown',
 	},
 }
 
@@ -19,7 +20,12 @@ const ITEMS = styled(NavLink)`
 `
 
 // const nav_items = ['home', 'work', 3, 4, 5]
-const nav_items = [{ name: 'work', path: '/work' }]
+const nav_items = [
+	{ name: 'home', path: '/' },
+	{ name: 'work', path: '/work' },
+	{ name: 'services', path: '/services' },
+	{ name: 'about me', path: '/about_me' },
+]
 
 const NAVIGATION_ITEMS = () => {
 	return (

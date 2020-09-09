@@ -36,7 +36,7 @@ export const OVERLAY = styled.div`
 	content: '';
 	height: 100vh;
 	width: 100vw;
-	// background: black;
+	background: black;
 	position: absolute;
 	top: 0;
 	left: 0;

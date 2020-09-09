@@ -6,6 +6,12 @@
 	box-sizing: inherit;
 }
 
+/* :root { */
+/* 	font-size: calc( */
+/* 		3.75px + 6.67px + 1.875px */
+/* 	); /1* 1vw + 1vh + .5min *1/ */
+/* } */
+
 html,
 body,
 div,
