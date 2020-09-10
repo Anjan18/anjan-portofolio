@@ -1,8 +1,10 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
-import NAVIGATION_ITEMS from 'components/navigation_items/navigation_items'
+import NAVIGATION_ITEMS, {
+	nav_items_quantity,
+} from 'components/navigation_items/navigation_items'
 
 const navigation_variants = {
 	initial: { x: 100 },
@@ -10,7 +12,7 @@ const navigation_variants = {
 		x: 0,
 	},
 	exit: {
-		color: 'green',
+		x: 100,
 	},
 }
 
@@ -23,7 +25,17 @@ const CONTAINER = styled(motion.nav)`
 	width: 100vw;
 	height: 100vh;
 	display: grid;
-	grid-template-rows: repeat(5, 1fr);
+	grid-template-rows: repeat(${nav_items_quantity}, 1fr);
+
+	@media (min-width: 1601px) {
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(
+			${nav_items_quantity},
+			1fr
+		);
+		height: 5vh;
+		top: 95%;
+	}
 `
 
 const NAVIGATION_BAR = () => {

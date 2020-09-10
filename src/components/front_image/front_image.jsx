@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import swift from 'assets/front.png'
 
 const CONTAINER = styled.div`
-	background: brown;
+	// background: brown;
 	height: 100vh;
 	width: 100vw;
 	position: relative;

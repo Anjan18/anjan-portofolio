@@ -33,9 +33,9 @@ const NAVIGATION = Loadable({
 	loading: Loading,
 })
 
-const App = ({ location, match }) => {
-	let global_break = 1600
+export let global_break = 1600
 
+const App = ({ location, match }) => {
 	// state of window size
 	const [window_state, set_window_state] = useState(
 		window.innerWidth <= global_break ? true : false
@@ -51,8 +51,6 @@ const App = ({ location, match }) => {
 
 	window.addEventListener('resize', resize_function)
 
-	console.log(location)
-
 	return (
 		<>
 			<Switch>
@@ -62,11 +60,7 @@ const App = ({ location, match }) => {
 					component={PAGES}
 				/>
 			</Switch>
-			{location.pathname === '/' ? (
-				<HOME />
-			) : (
-				console.log('fuck')
-			)}
+			{location.pathname === '/' ? <HOME /> : null}
 
 			<BACKGROUND />
 			<FRONT_IMAGE window_state={window_state} />

@@ -27,6 +27,8 @@ const nav_items = [
 	{ name: 'about me', path: '/about_me' },
 ]
 
+export let nav_items_quantity = nav_items.length
+
 const NAVIGATION_ITEMS = () => {
 	return (
 		<>
@@ -35,11 +37,11 @@ const NAVIGATION_ITEMS = () => {
 					<motion.span
 						variants={variants}
 						whileHover="hover"
+						key={short_id.generate()}
 					>
 						<ITEMS
 							to={item.path}
 							children={item.name}
-							key={short_id.generate()}
 						/>
 					</motion.span>
 				)

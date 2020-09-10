@@ -4,14 +4,14 @@ import styled from 'styled-components'
 let common = `height: 100vh; `
 
 const CONTAINER = styled.div`
-	${common}
-	max-width: 100vw;
-	// grid-template-columns: 60% 40%;
-	grid-template-columns: 1fr;
-	display: none;
+	height: 100vh;
+	width: 100vw;
+	grid-template-columns: 60% 40%;
 	position: absolute;
+	top: 0;
+	left: 0;
 
-	@media (min-width: 1050px) {
+	@media (min-width: 1600px) {
 		display: grid;
 	}
 `
